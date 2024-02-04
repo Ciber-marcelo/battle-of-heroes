@@ -1,8 +1,10 @@
+'use client'
+
 import axios from "axios"
 import { useEffect, useState } from "react";
 
 export default function Section() {
-   const [characters, setCharacters] = useState([]);
+   const [character, setCharacter] = useState([]);
 
    useEffect(() => {
       getCharacters()
@@ -10,15 +12,15 @@ export default function Section() {
 
    async function getCharacters() {
       try {
-         const response = await axios.get("https://fdlmx-backgrounds.sfo3.digitaloceanspaces.com/front-test/survey.json");
-         setCharacters(response.data.itens)
-         console.log('sucesso', response.data.itens)
+         const response = await axios.get("https://www.superheroapi.com/api.php/2450577805128827/search/hulk");
+         setCharacter(response.data.results[0].name)
+         console.log('sucesso', response.data.results[0].name)
       } catch (error) {
          console.log(error)
       }
    }
 
    return(
-      <div>teste</div>
+      <div>teste 2s {character}</div>
    )
 }
