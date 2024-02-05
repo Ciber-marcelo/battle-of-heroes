@@ -1,0 +1,12 @@
+$color1: red;
+$color2: blue;
+
+.teta {
+   display: flex;
+   flex-direction: column;
+   width: 400px;
+   background-color: $color1;
+   &:hover{
+      background-color: $color2;
+   }
+}
