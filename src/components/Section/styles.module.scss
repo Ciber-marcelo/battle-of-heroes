@@ -1,12 +1,19 @@
 $color1: red;
 $color2: blue;
 
-.teta {
-   display: flex;
-   flex-direction: column;
-   width: 400px;
-   background-color: $color1;
+.main {
+   // display: flex;
+   // gap: 20px;
+
+   // background-color: $color1;
    // &:hover{
    //    background-color: $color2;
    // }
+}
+
+.container {
+   display: flex;
+   width: fit-content;
+   gap: 20px;
+   padding: 10px;
 }

@@ -1,9 +1,9 @@
 'use client'
 
 import axios from "axios"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./styles.module.css";
-import Image from "next/image";
+import Card from "../Card";
 
 export default function Section() {
    const [character, setCharacter] = useState<any>([]);
@@ -29,7 +29,7 @@ export default function Section() {
    }
 
    return (
-      <div className={styles.teta}>
+      <div className={styles.main}>
          <input
             onChange={(e: any) => setSearch(e.target.value)}
             //sempre que vc aperta uma tecla do teclado, vc chama o "onKeyDown"
@@ -38,18 +38,16 @@ export default function Section() {
 
          <button onClick={() => getCharacter(search)}>button</button>
 
-         {character.map((item: any, i: any) => (
-            <div key={i}>
-               {item.name}
-               {item.powerstats.speed}
-               <Image
-                  width={240}
-                  height={320}
-                  src={item.image.url}
-                  alt=""
+         <div className={styles.container}>
+            {character.map((item: any, i: any) => (
+               <Card
+                  key={i}
+                  image={item.image.url}
+                  name={item.name}
+                  realName={item['biography']['full-name']}
                />
-            </div>
-         ))}
+            ))}
+         </div>
       </div>
    )
 }

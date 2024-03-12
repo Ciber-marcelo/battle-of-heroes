@@ -1,0 +1,15 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 10px;
+  border: 5px solid rgb(18, 18, 76);
+}
+
+.image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}/*# sourceMappingURL=styles.module.css.map */

@@ -1,6 +1,7 @@
-.teta {
+.container {
   display: flex;
-  flex-direction: column;
-  width: 400px;
-  background-color: red;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 20px;
+  padding: 10px;
 }/*# sourceMappingURL=styles.module.css.map */
