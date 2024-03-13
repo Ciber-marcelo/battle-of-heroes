@@ -2,8 +2,12 @@ $color1: red;
 $color2: blue;
 
 .main {
-   // display: flex;
-   // gap: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   
+   gap: 10px;
 
    // background-color: $color1;
    // &:hover{
@@ -13,7 +17,12 @@ $color2: blue;
 
 .container {
    display: flex;
-   width: fit-content;
-   gap: 20px;
+   justify-content: center;
+   align-items: center;
+   min-width: 210px;
+   min-height: 270px;
    padding: 10px;
+   border-radius: 10px;
+   gap: 20px;
+   background-color: blue;
 }

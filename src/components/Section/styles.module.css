@@ -1,7 +1,19 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 .container {
   display: flex;
-  width: -moz-fit-content;
-  width: fit-content;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  min-width: 210px;
+  min-height: 270px;
   padding: 10px;
+  border-radius: 10px;
+  gap: 20px;
+  background-color: blue;
 }/*# sourceMappingURL=styles.module.css.map */

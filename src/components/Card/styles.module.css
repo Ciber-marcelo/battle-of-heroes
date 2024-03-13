@@ -1,15 +1,32 @@
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 10px;
-  border: 5px solid rgb(18, 18, 76);
 }
 
 .image {
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 5px 5px 0 0;
+  border-radius: 15px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0 10px 0;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 0 0 15px 15px;
+  margin-top: -66px;
+}
+
+.t1 {
+  font-size: 18px;
+  font-weight: 900;
+  color: white;
+}
+
+.t2 {
+  font-size: 12px;
+  font-weight: 400;
+  color: white;
 }/*# sourceMappingURL=styles.module.css.map */

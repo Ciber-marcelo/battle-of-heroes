@@ -30,13 +30,14 @@ export default function Section() {
 
    return (
       <div className={styles.main}>
-         <input
-            onChange={(e: any) => setSearch(e.target.value)}
-            //sempre que vc aperta uma tecla do teclado, vc chama o "onKeyDown"
-            onKeyDown={keyPress}
-         />
-
-         <button onClick={() => getCharacter(search)}>button</button>
+         <div>
+            <input
+               onChange={(e: any) => setSearch(e.target.value)}
+               //sempre que vc aperta uma tecla do teclado, vc chama o "onKeyDown"
+               onKeyDown={keyPress}
+            />
+            <button onClick={() => getCharacter(search)}>button</button>
+         </div>
 
          <div className={styles.container}>
             {character.map((item: any, i: any) => (

@@ -5,7 +5,6 @@ import Section from "@/components/Section";
 export default function Home() {
   return (
     <div>
-      <p>BATTLE OF HEROES</p>
       <Section />
     </div>
     

@@ -12,13 +12,15 @@ export default function Card({image, name, realName}: cardProps) {
       <div className={styles.card}>
          <Image
             className={styles.image}
-            width={120}
-            height={140}
+            width={180}
+            height={240}
             src={image}
-            alt=""
+            alt="image hero"
          />
-         <p>{name}</p>
-         <p>{realName}</p>
+         <div className={styles.text}>
+            <p className={styles.t1}>{name}</p>
+            <p className={styles.t2}>{realName}</p>
+         </div>
       </div>
    )
 }
