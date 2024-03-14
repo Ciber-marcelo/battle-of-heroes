@@ -1,0 +1,23 @@
+.container {
+   display: flex;
+   margin-top: 10px;
+}
+
+.input {
+   padding: 10px;
+   border: 2px solid black;
+   border-radius: 15px 0  0 15px;
+   background-color: rgb(190, 182, 255);
+}
+
+.button {
+   border: 2px solid black;
+   border-left: 0;
+   padding: 10px;
+   border-radius: 0 15px 15px 0;
+   background-color: rgb(111, 92, 253);
+
+   &:hover {
+      background-color: red;
+   }
+}

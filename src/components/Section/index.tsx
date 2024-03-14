@@ -4,6 +4,7 @@ import axios from "axios"
 import { useState } from "react";
 import styles from "./styles.module.css";
 import Card from "../Card";
+import Input from "../Input";
 
 export default function Section() {
    const [character, setCharacter] = useState<any>([]);
@@ -30,14 +31,11 @@ export default function Section() {
 
    return (
       <div className={styles.main}>
-         <div>
-            <input
-               onChange={(e: any) => setSearch(e.target.value)}
-               //sempre que vc aperta uma tecla do teclado, vc chama o "onKeyDown"
-               onKeyDown={keyPress}
-            />
-            <button onClick={() => getCharacter(search)}>button</button>
-         </div>
+         <Input
+            onChange={(e: any) => setSearch(e.target.value)}
+            onClick={() => getCharacter(search)}
+            onKeyDown={keyPress}
+         />
 
          <div className={styles.container}>
             {character.map((item: any, i: any) => (

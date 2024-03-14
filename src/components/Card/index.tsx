@@ -9,7 +9,7 @@ type cardProps = {
 
 export default function Card({image, name, realName}: cardProps) {
    return(
-      <div className={styles.card}>
+      <button className={styles.card}>
          <Image
             className={styles.image}
             width={180}
@@ -21,6 +21,6 @@ export default function Card({image, name, realName}: cardProps) {
             <p className={styles.t1}>{name}</p>
             <p className={styles.t2}>{realName}</p>
          </div>
-      </div>
+      </button>
    )
 }

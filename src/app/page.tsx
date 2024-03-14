@@ -1,5 +1,3 @@
-import Image from "next/image";
-import styles from "./page.module.css";
 import Section from "@/components/Section";
 
 export default function Home() {
@@ -7,7 +5,5 @@ export default function Home() {
     <div>
       <Section />
     </div>
-    
-    // <main className={styles.main}></main>
   );
 }

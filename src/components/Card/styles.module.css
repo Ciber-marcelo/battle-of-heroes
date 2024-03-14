@@ -1,6 +1,11 @@
 .card {
   display: flex;
   flex-direction: column;
+  width: 180px;
+  height: 240px;
+  border-radius: 15px;
+  border: none;
+  position: relative;
 }
 
 .image {
@@ -13,10 +18,11 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 20px 0 10px 0;
+  padding: 20px 10px 10px 10px;
   background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
   border-radius: 0 0 15px 15px;
-  margin-top: -66px;
+  position: absolute;
+  bottom: 0;
 }
 
 .t1 {

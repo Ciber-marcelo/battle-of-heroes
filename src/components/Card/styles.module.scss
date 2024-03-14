@@ -1,7 +1,11 @@
 .card {
    display: flex;
    flex-direction: column;
-   // position: relative;
+   width: 180px;
+   height: 240px;
+   border-radius: 15px;
+   border: none;
+   position: relative;
    // object-fit: contain;
 }
 
@@ -10,16 +14,16 @@
 }
 
 .text {
-   // position: absolute;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    width: 100%;
-   padding: 20px 0 10px 0;
+   padding: 20px 10px 10px 10px;
    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
    border-radius: 0 0 15px 15px;
-   margin-top: -66px;
+   position: absolute;
+   bottom: 0;
 }
 
 .t1 {
