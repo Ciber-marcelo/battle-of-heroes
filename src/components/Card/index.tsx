@@ -5,11 +5,12 @@ type cardProps = {
    image: any
    name: string
    realName: string
+   onClick?: any
 }
 
-export default function Card({image, name, realName}: cardProps) {
+export default function Card({image, name, realName, onClick}: cardProps) {
    return(
-      <button className={styles.card}>
+      <button className={styles.card} onClick={onClick}>
          <Image
             className={styles.image}
             width={180}

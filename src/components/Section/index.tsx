@@ -5,9 +5,12 @@ import { useState } from "react";
 import styles from "./styles.module.css";
 import Card from "../Card";
 import Input from "../Input";
+import HeroStats from "../Hero-stats";
 
 export default function Section() {
    const [character, setCharacter] = useState<any>([]);
+   const [char1, setChar1] = useState<any>(null);
+   const [char2, setChar2] = useState({});
    const [search, setSearch] = useState('');
 
    async function getCharacter(char: any) {
@@ -29,6 +32,21 @@ export default function Section() {
       }
    }
 
+   function setChar(char: any) {
+      setChar1({
+         image: char.image.url,
+         name: char.name,
+         realName: char['biography']['full-name'],
+         combat: char.powerstats.combat,
+         durability: char.powerstats.durability,
+         intelligence: char.powerstats.intelligence,
+         power: char.powerstats.power,
+         speed: char.powerstats.speed,
+         strength: char.powerstats.strength
+      })
+      console.log(char)
+   }
+
    return (
       <div className={styles.main}>
          <Input
@@ -44,8 +62,25 @@ export default function Section() {
                   image={item.image.url}
                   name={item.name}
                   realName={item['biography']['full-name']}
+                  onClick={() => setChar(item)}
                />
             ))}
+         </div>
+
+         <div>
+            {char1 !== null &&
+               <HeroStats
+                  image={char1.image}
+                  name={char1.name}
+                  realName={char1.realName}
+                  combat={char1.combat}
+                  durability={char1.durability}
+                  intelligence={char1.intelligence}
+                  power={char1.power}
+                  speed={char1.speed}
+                  strength={char1.strength}
+               />
+            }
          </div>
       </div>
    )
