@@ -10,12 +10,11 @@ $color2: blue;
    background-color: rgb(224, 224, 224);
 }
 
-.container {
+.containerChars {
    display: flex;
    align-items: center;
    max-width: 1200px;
    width: 100%;
-   border-radius: 10px 10px 0 0;
    gap: 10px;
    padding-bottom: 10px;
    overflow-x: auto;
@@ -42,4 +41,13 @@ $color2: blue;
    &::-webkit-scrollbar-thumb:hover {
       background: #001eff;
    }
+}
+
+.containerStats {
+   display: flex;
+   justify-content: center;
+   background-color: red;
+   // max-width: 1200px;
+   width: 100%;
+   gap: 10px;
 }

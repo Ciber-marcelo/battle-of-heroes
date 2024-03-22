@@ -10,7 +10,7 @@ import HeroStats from "../Hero-stats";
 export default function Section() {
    const [character, setCharacter] = useState<any>([]);
    const [char1, setChar1] = useState<any>(null);
-   const [char2, setChar2] = useState({});
+   const [char2, setChar2] = useState<any>(null);
    const [search, setSearch] = useState('');
 
    async function getCharacter(char: any) {
@@ -33,18 +33,31 @@ export default function Section() {
    }
 
    function setChar(char: any) {
-      setChar1({
-         image: char.image.url,
-         name: char.name,
-         realName: char['biography']['full-name'],
-         combat: char.powerstats.combat,
-         durability: char.powerstats.durability,
-         intelligence: char.powerstats.intelligence,
-         power: char.powerstats.power,
-         speed: char.powerstats.speed,
-         strength: char.powerstats.strength
-      })
-      console.log(char)
+      char1 === null ?
+         setChar1({
+            image: char.image.url,
+            name: char.name,
+            realName: char['biography']['full-name'],
+            combat: char.powerstats.combat,
+            durability: char.powerstats.durability,
+            intelligence: char.powerstats.intelligence,
+            power: char.powerstats.power,
+            speed: char.powerstats.speed,
+            strength: char.powerstats.strength
+         })
+         :
+         setChar2({
+            image: char.image.url,
+            name: char.name,
+            realName: char['biography']['full-name'],
+            combat: char.powerstats.combat,
+            durability: char.powerstats.durability,
+            intelligence: char.powerstats.intelligence,
+            power: char.powerstats.power,
+            speed: char.powerstats.speed,
+            strength: char.powerstats.strength
+         })
+      // console.log(char)
    }
 
    return (
@@ -55,7 +68,7 @@ export default function Section() {
             onKeyDown={keyPress}
          />
 
-         <div className={styles.container}>
+         <div className={styles.containerChars}>
             {character.map((item: any, i: any) => (
                <Card
                   key={i}
@@ -67,7 +80,7 @@ export default function Section() {
             ))}
          </div>
 
-         <div>
+         <div className={styles.containerStats}>
             {char1 !== null &&
                <HeroStats
                   image={char1.image}
@@ -79,6 +92,20 @@ export default function Section() {
                   power={char1.power}
                   speed={char1.speed}
                   strength={char1.strength}
+               />
+            }
+
+            {char2 !== null &&
+               <HeroStats
+                  image={char2.image}
+                  name={char2.name}
+                  realName={char2.realName}
+                  combat={char2.combat}
+                  durability={char2.durability}
+                  intelligence={char2.intelligence}
+                  power={char2.power}
+                  speed={char2.speed}
+                  strength={char2.strength}
                />
             }
          </div>

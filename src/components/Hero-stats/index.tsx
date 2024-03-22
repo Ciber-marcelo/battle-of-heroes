@@ -22,12 +22,12 @@ export default function HeroStats({ image, name, realName, combat, durability, i
             realName={realName}
          />
          <div className={styles.stats}>
-            <p>{combat}</p>
-            <p>{durability}</p>
-            <p>{intelligence}</p>
-            <p>{power}</p>
-            <p>{speed}</p>
-            <p>{strength}</p>
+            <p>Combat: {combat}</p>
+            <p>Durabity: {durability}</p>
+            <p>Intelligence: {intelligence}</p>
+            <p>Power: {power}</p>
+            <p>Speed: {speed}</p>
+            <p>Strenght: {strength}</p>
          </div>
       </div>
    )

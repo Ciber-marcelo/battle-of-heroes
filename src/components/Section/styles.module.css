@@ -7,30 +7,37 @@
   background-color: rgb(224, 224, 224);
 }
 
-.container {
+.containerChars {
   display: flex;
   align-items: center;
   max-width: 1200px;
   width: 100%;
-  border-radius: 10px 10px 0 0;
   gap: 10px;
   padding-bottom: 10px;
   overflow-x: auto;
   /* width */
   /* Track */
 }
-.container::-webkit-scrollbar {
+.containerChars::-webkit-scrollbar {
   width: 10px;
   height: 10px;
   padding: 20px;
 }
-.container::-webkit-scrollbar-track {
+.containerChars::-webkit-scrollbar-track {
   background: rgba(255, 39, 39, 0);
 }
-.container::-webkit-scrollbar-thumb {
+.containerChars::-webkit-scrollbar-thumb {
   background: #3f55fe;
   border-radius: 10px;
 }
-.container::-webkit-scrollbar-thumb:hover {
+.containerChars::-webkit-scrollbar-thumb:hover {
   background: #001eff;
+}
+
+.containerStats {
+  display: flex;
+  justify-content: center;
+  background-color: red;
+  width: 100%;
+  gap: 10px;
 }/*# sourceMappingURL=styles.module.css.map */
