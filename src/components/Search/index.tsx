@@ -6,7 +6,7 @@ type inputProps = {
    onClick: any
 }
 
-export default function Input({ onChange, onKeyDown, onClick }: inputProps) {
+export default function Search({ onChange, onKeyDown, onClick }: inputProps) {
    return (
       <div className={styles.container}>
          <input

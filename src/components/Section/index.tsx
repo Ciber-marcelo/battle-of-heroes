@@ -4,13 +4,33 @@ import axios from "axios"
 import { useState } from "react";
 import styles from "./styles.module.css";
 import Card from "../Card";
-import Input from "../Input";
 import HeroStats from "../Hero-stats";
+import Search from "../Search";
 
 export default function Section() {
    const [character, setCharacter] = useState<any>([]);
-   const [char1, setChar1] = useState<any>(null);
-   const [char2, setChar2] = useState<any>(null);
+   const [char1, setChar1] = useState<any>({
+      image: null,
+      name: null,
+      realName: null,
+      combat: null,
+      durability: null,
+      intelligence: null,
+      power: null,
+      speed: null,
+      strength: null
+   });
+   const [char2, setChar2] = useState<any>({
+      image: null,
+      name: null,
+      realName: null,
+      combat: null,
+      durability: null,
+      intelligence: null,
+      power: null,
+      speed: null,
+      strength: null
+   });
    const [search, setSearch] = useState('');
 
    async function getCharacter(char: any) {
@@ -33,7 +53,7 @@ export default function Section() {
    }
 
    function setChar(char: any) {
-      char1 === null ?
+      char1.name === null ?
          setChar1({
             image: char.image.url,
             name: char.name,
@@ -62,7 +82,7 @@ export default function Section() {
 
    return (
       <div className={styles.main}>
-         <Input
+         <Search
             onChange={(e: any) => setSearch(e.target.value)}
             onClick={() => getCharacter(search)}
             onKeyDown={keyPress}
@@ -80,35 +100,27 @@ export default function Section() {
             ))}
          </div>
 
-         <div className={styles.containerStats}>
-            {char1 !== null &&
-               <HeroStats
-                  image={char1.image}
-                  name={char1.name}
-                  realName={char1.realName}
-                  combat={char1.combat}
-                  durability={char1.durability}
-                  intelligence={char1.intelligence}
-                  power={char1.power}
-                  speed={char1.speed}
-                  strength={char1.strength}
-               />
-            }
+         <HeroStats
+            image1={char1.image}
+            name1={char1.name}
+            realName1={char1.realName}
+            combat1={char1.combat}
+            durability1={char1.durability}
+            intelligence1={char1.intelligence}
+            power1={char1.power}
+            speed1={char1.speed}
+            strength1={char1.strength}
 
-            {char2 !== null &&
-               <HeroStats
-                  image={char2.image}
-                  name={char2.name}
-                  realName={char2.realName}
-                  combat={char2.combat}
-                  durability={char2.durability}
-                  intelligence={char2.intelligence}
-                  power={char2.power}
-                  speed={char2.speed}
-                  strength={char2.strength}
-               />
-            }
-         </div>
+            image2={char2.image}
+            name2={char2.name}
+            realName2={char2.realName}
+            combat2={char2.combat}
+            durability2={char2.durability}
+            intelligence2={char2.intelligence}
+            power2={char2.power}
+            speed2={char2.speed}
+            strength2={char2.strength}
+         />
       </div>
    )
 }

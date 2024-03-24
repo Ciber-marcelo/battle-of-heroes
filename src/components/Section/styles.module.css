@@ -32,12 +32,4 @@
 }
 .containerChars::-webkit-scrollbar-thumb:hover {
   background: #001eff;
-}
-
-.containerStats {
-  display: flex;
-  justify-content: center;
-  background-color: red;
-  width: 100%;
-  gap: 10px;
 }/*# sourceMappingURL=styles.module.css.map */

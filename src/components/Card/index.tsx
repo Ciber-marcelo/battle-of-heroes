@@ -2,9 +2,9 @@ import Image from "next/image"
 import styles from "./styles.module.css";
 
 type cardProps = {
-   image: any
-   name: string
-   realName: string
+   image?: any
+   name?: string
+   realName?: string
    onClick?: any
 }
 
