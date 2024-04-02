@@ -2,34 +2,43 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 20px 0 20px;
-  gap: 10px;
-  background-color: rgb(224, 224, 224);
+  padding: 1rem;
+  gap: 1rem;
+  background-color: rgb(255, 255, 255);
 }
 
 .containerChars {
   display: flex;
-  align-items: center;
-  max-width: 1200px;
   width: 100%;
-  gap: 10px;
-  padding-bottom: 10px;
+  max-width: 1200px;
+  height: 268px;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.2);
   overflow-x: auto;
-  /* width */
-  /* Track */
 }
 .containerChars::-webkit-scrollbar {
   width: 10px;
-  height: 10px;
+  height: 12px;
   padding: 20px;
 }
 .containerChars::-webkit-scrollbar-track {
-  background: rgba(255, 39, 39, 0);
+  background: transparent;
 }
 .containerChars::-webkit-scrollbar-thumb {
-  background: #3f55fe;
+  background: rgba(0, 0, 0, 0.4588235294);
   border-radius: 10px;
 }
 .containerChars::-webkit-scrollbar-thumb:hover {
-  background: #001eff;
+  background: rgba(0, 0, 0, 0.6862745098);
+}
+.containerChars::-webkit-scrollbar-thumb:active {
+  background: rgba(0, 0, 0, 0.8980392157);
+}
+
+.containerChars2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 10px;
 }/*# sourceMappingURL=styles.module.css.map */

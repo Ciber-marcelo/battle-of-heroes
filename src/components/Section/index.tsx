@@ -89,15 +89,17 @@ export default function Section() {
          />
 
          <div className={styles.containerChars}>
-            {character.map((item: any, i: any) => (
-               <Card
-                  key={i}
-                  image={item.image.url}
-                  name={item.name}
-                  realName={item['biography']['full-name']}
-                  onClick={() => setChar(item)}
-               />
-            ))}
+            <div className={styles.containerChars2}>
+               {character.map((item: any, i: any) => (
+                  <Card
+                     key={i}
+                     image={item.image.url}
+                     name={item.name}
+                     realName={item['biography']['full-name']}
+                     onClick={() => setChar(item)}
+                  />
+               ))}
+            </div>
          </div>
 
          <HeroStats

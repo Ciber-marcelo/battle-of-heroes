@@ -5,49 +5,48 @@ $color2: blue;
    display: flex;
    flex-direction: column;
    align-items: center;
-   padding: 0 20px 0 20px;
-   gap: 10px;
-   background-color: rgb(224, 224, 224);
+   padding: 1rem;
+   gap: 1rem;
+   background-color: rgb(255, 255, 255);
 }
 
 .containerChars {
    display: flex;
-   align-items: center;
-   max-width: 1200px;
    width: 100%;
-   gap: 10px;
-   padding-bottom: 10px;
+   max-width: 1200px;
+   height: 268px;
+   padding: 0.5rem;
+   border-radius: 6px;
+   background-color: rgba(0, 0, 0, 0.2);
    overflow-x: auto;
 
-   /* width */
    &::-webkit-scrollbar {
       width: 10px;
-      height: 10px;
+      height: 12px;
       padding: 20px;
    }
 
-   /* Track */
    &::-webkit-scrollbar-track {
-      background: #ff272700;
+      background: transparent;
    }
 
-   // /* Handle */
    &::-webkit-scrollbar-thumb {
-      background: #3f55fe;
+      background: #00000075;
       border-radius: 10px;
    }
 
-   // /* Handle on hover */
    &::-webkit-scrollbar-thumb:hover {
-      background: #001eff;
+      background: #000000af;
+   }
+
+   &::-webkit-scrollbar-thumb:active {
+      background: #000000e5;
    }
 }
 
-// .containerStats {
-//    display: flex;
-//    justify-content: center;
-//    background-color: red;
-//    // max-width: 1200px;
-//    width: 100%;
-//    gap: 10px;
-// }
+.containerChars2 {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   border-radius: 10px;
+}

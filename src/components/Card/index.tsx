@@ -8,8 +8,8 @@ type cardProps = {
    onClick?: any
 }
 
-export default function Card({image, name, realName, onClick}: cardProps) {
-   return(
+export default function Card({ image, name, realName, onClick }: cardProps) {
+   return (
       <button className={styles.card} onClick={onClick}>
          <Image
             className={styles.image}
