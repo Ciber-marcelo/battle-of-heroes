@@ -61,6 +61,7 @@ export default function HeroStats({
             </div>
          }
 
+         
          <div className={styles.stats}>
             <p>Combat</p>
             <p>Durabity</p>

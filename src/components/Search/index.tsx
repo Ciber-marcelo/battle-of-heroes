@@ -15,12 +15,7 @@ export default function Search({ onChange, onKeyDown, onClick }: inputProps) {
             //sempre que vc aperta uma tecla do teclado, vc chama o "onKeyDown"
             onKeyDown={onKeyDown}
          />
-         <button 
-            onClick={onClick}
-            className={styles.button}
-         >
-            Search
-         </button>
+         <button onClick={onClick} className={styles.button}>Search</button>
       </div>
    )
 }
