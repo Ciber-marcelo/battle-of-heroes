@@ -47,43 +47,46 @@ export default function HeroStats({
 
    return (
       <div className={styles.main}>
-         {name1 !== null &&
-            <div className={styles.card1}>
-               <Card image={image1} name={name1} realName={realName1} />
-               <div className={styles.stats}>
-                  <p>{combat1}</p>
-                  <p>{durability1}</p>
-                  <p>{intelligence1}</p>
-                  <p>{power1}</p>
-                  <p>{speed1}</p>
-                  <p>{strength1}</p>
-               </div>
-            </div>
-         }
-
-         
-         <div className={styles.stats}>
-            <p>Combat</p>
-            <p>Durabity</p>
-            <p>Intelligence</p>
-            <p>Power</p>
-            <p>Speed</p>
-            <p>Strenght</p>
+         <div className={styles.card}>
+            {name1 !== null && <Card image={image1} name={name1} realName={realName1} />}
          </div>
 
-         {name2 !== null && 
-            <div className={styles.card2}>
-               <Card image={image2} name={name2} realName={realName2} />
+         <div className={styles.containerStats1}>
+            <div className={styles.containerStats2}>
                <div className={styles.stats}>
-                  <p>{combat2}</p>
-                  <p>{durability2}</p>
-                  <p>{intelligence2}</p>
-                  <p>{power2}</p>
-                  <p>{speed2}</p>
-                  <p>{strength2}</p>
+                  <p>{!combat1 ? '?' : combat1}</p>
+                  <p>{!durability1 ? '?' : durability1}</p>
+                  <p>{!intelligence1 ? '?' : intelligence1}</p>
+                  <p>{!power1 ? '?' : power1}</p>
+                  <p>{!speed1 ? '?' : speed1}</p>
+                  <p>{!strength1 ? '?' : strength1}</p>
+               </div>
+
+               <div className={styles.stats}>
+                  <p>COMBAT</p>
+                  <p>DURABILITY</p>
+                  <p>INTELLIGENCE</p>
+                  <p>POWER</p>
+                  <p>SPEED</p>
+                  <p>STRENGTH</p>
+               </div>
+
+               <div className={styles.stats}>
+                  <p>{!combat2 ? '?' : combat2}</p>
+                  <p>{!durability2 ? '?' : durability2}</p>
+                  <p>{!intelligence2 ? '?' : intelligence2}</p>
+                  <p>{!power2 ? '?' : power2}</p>
+                  <p>{!speed2 ? '?' : speed2}</p>
+                  <p>{!strength2 ? '?' : strength2}</p>
                </div>
             </div>
-         }
+
+            <button className={styles.button}>FIGHT</button>
+         </div>
+
+         <div className={styles.card}>
+            {name2 !== null && <Card image={image2} name={name2} realName={realName2} />}
+         </div>
       </div>
    )
 }

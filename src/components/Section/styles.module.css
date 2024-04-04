@@ -26,14 +26,14 @@
   background: transparent;
 }
 .containerChars::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.4588235294);
+  background: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
 .containerChars::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.6862745098);
+  background: rgba(0, 0, 0, 0.6);
 }
 .containerChars::-webkit-scrollbar-thumb:active {
-  background: rgba(0, 0, 0, 0.8980392157);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .containerChars2 {

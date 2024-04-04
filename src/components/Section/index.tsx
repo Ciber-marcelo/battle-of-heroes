@@ -106,22 +106,22 @@ export default function Section() {
             image1={char1.image}
             name1={char1.name}
             realName1={char1.realName}
-            combat1={char1.combat}
-            durability1={char1.durability}
-            intelligence1={char1.intelligence}
-            power1={char1.power}
-            speed1={char1.speed}
-            strength1={char1.strength}
+            combat1={parseInt(char1.combat)}
+            durability1={parseInt(char1.durability)}
+            intelligence1={parseInt(char1.intelligence)}
+            power1={parseInt(char1.power)}
+            speed1={parseInt(char1.speed)}
+            strength1={parseInt(char1.strength)}
 
             image2={char2.image}
             name2={char2.name}
             realName2={char2.realName}
-            combat2={char2.combat}
-            durability2={char2.durability}
-            intelligence2={char2.intelligence}
-            power2={char2.power}
-            speed2={char2.speed}
-            strength2={char2.strength}
+            combat2={parseInt(char2.combat)}
+            durability2={parseInt(char2.durability)}
+            intelligence2={parseInt(char2.intelligence)}
+            power2={parseInt(char2.power)}
+            speed2={parseInt(char2.speed)}
+            strength2={parseInt(char2.strength)}
          />
       </div>
    )

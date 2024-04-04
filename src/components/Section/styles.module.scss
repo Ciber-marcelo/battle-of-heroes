@@ -31,16 +31,16 @@ $color2: blue;
    }
 
    &::-webkit-scrollbar-thumb {
-      background: #00000075;
+      background: rgba(0, 0, 0, 0.4);
       border-radius: 10px;
    }
 
    &::-webkit-scrollbar-thumb:hover {
-      background: #000000af;
+      background: rgba(0, 0, 0, 0.6);
    }
 
    &::-webkit-scrollbar-thumb:active {
-      background: #000000e5;
+      background: rgba(0, 0, 0, 0.8);
    }
 }
 
