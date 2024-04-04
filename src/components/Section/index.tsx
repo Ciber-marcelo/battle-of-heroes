@@ -1,7 +1,7 @@
 'use client'
 
 import axios from "axios"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import Card from "../Card";
 import HeroStats from "../Hero-stats";
@@ -33,9 +33,12 @@ export default function Section() {
    });
    const [search, setSearch] = useState('');
 
-   async function getCharacter(char: any) {
-      setCharacter([])
+   useEffect(() => {
+      getCharacter('batman')
+   }, [])
 
+   async function getCharacter(char: string) {
+      setCharacter([])
       const response = await axios.get(`https://www.superheroapi.com/api.php/2450577805128827/search/${char}`);
       if (response.data.results !== undefined) {
          setCharacter(response.data.results)
