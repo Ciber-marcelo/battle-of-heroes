@@ -8,7 +8,7 @@ import HeroStats from "../Hero-stats";
 import Search from "../Search";
 
 export default function Section() {
-   const [character, setCharacter] = useState<any>([]);
+   const [character, setCharacter] = useState<any>(null);
    const [char1, setChar1] = useState<any>({
       image: null,
       name: null,
@@ -44,6 +44,7 @@ export default function Section() {
          setCharacter(response.data.results)
          console.log('sucesso', response.data.results)
       } else {
+         setCharacter(null)
          console.log('erro, nenhum personagem encontrado', response.data.results)
       }
    }
@@ -93,15 +94,21 @@ export default function Section() {
 
          <div className={styles.containerChars}>
             <div className={styles.containerChars2}>
-               {character.map((item: any, i: any) => (
-                  <Card
-                     key={i}
-                     image={item.image.url}
-                     name={item.name}
-                     realName={item['biography']['full-name']}
-                     onClick={() => setChar(item)}
-                  />
-               ))}
+               {character !== null ?
+                  character.map((item: any, i: any) => (
+                     <Card
+                        key={i}
+                        image={item.image.url}
+                        name={item.name}
+                        realName={item['biography']['full-name']}
+                        onClick={() => setChar(item)}
+                     />
+                  ))
+                  :
+                  <div className={styles.notFound}>
+                     {'NOT FOUND'}
+                  </div>
+               }
             </div>
          </div>
 
