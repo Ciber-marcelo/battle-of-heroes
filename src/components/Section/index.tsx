@@ -1,50 +1,30 @@
 'use client'
 
 import axios from "axios"
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { CharContext } from "@/contexts/context";
 import styles from "./styles.module.css";
 import Card from "../Card";
 import HeroStats from "../Hero-stats";
 import Search from "../Search";
 
 export default function Section() {
-   const [character, setCharacter] = useState<any>(null);
-   const [char1, setChar1] = useState<any>({
-      image: null,
-      name: null,
-      realName: null,
-      combat: null,
-      durability: null,
-      intelligence: null,
-      power: null,
-      speed: null,
-      strength: null
-   });
-   const [char2, setChar2] = useState<any>({
-      image: null,
-      name: null,
-      realName: null,
-      combat: null,
-      durability: null,
-      intelligence: null,
-      power: null,
-      speed: null,
-      strength: null
-   });
+   const [characters, setCharacters] = useState<any>(null);
    const [search, setSearch] = useState('');
-
+   const {char1, char2, setChar} = useContext(CharContext);
+   
    useEffect(() => {
       getCharacter('batman')
    }, [])
 
    async function getCharacter(char: string) {
-      setCharacter([])
+      setCharacters([])
       const response = await axios.get(`https://www.superheroapi.com/api.php/2450577805128827/search/${char}`);
       if (response.data.results !== undefined) {
-         setCharacter(response.data.results)
+         setCharacters(response.data.results)
          console.log('sucesso', response.data.results)
       } else {
-         setCharacter(null)
+         setCharacters(null)
          console.log('erro, nenhum personagem encontrado', response.data.results)
       }
    }
@@ -54,34 +34,6 @@ export default function Section() {
       if (e.keyCode === 13) {
          getCharacter(search);
       }
-   }
-
-   function setChar(char: any) {
-      char1.name === null ?
-         setChar1({
-            image: char.image.url,
-            name: char.name,
-            realName: char['biography']['full-name'],
-            combat: char.powerstats.combat,
-            durability: char.powerstats.durability,
-            intelligence: char.powerstats.intelligence,
-            power: char.powerstats.power,
-            speed: char.powerstats.speed,
-            strength: char.powerstats.strength
-         })
-         :
-         setChar2({
-            image: char.image.url,
-            name: char.name,
-            realName: char['biography']['full-name'],
-            combat: char.powerstats.combat,
-            durability: char.powerstats.durability,
-            intelligence: char.powerstats.intelligence,
-            power: char.powerstats.power,
-            speed: char.powerstats.speed,
-            strength: char.powerstats.strength
-         })
-      // console.log(char)
    }
 
    return (
@@ -94,8 +46,8 @@ export default function Section() {
 
          <div className={styles.containerChars}>
             <div className={styles.containerChars2}>
-               {character !== null ?
-                  character.map((item: any, i: any) => (
+               {characters !== null ?
+                  characters.map((item: any, i: any) => (
                      <Card
                         key={i}
                         image={item.image.url}
