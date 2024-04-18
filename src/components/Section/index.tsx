@@ -64,27 +64,7 @@ export default function Section() {
             </div>
          </div>
 
-         <HeroStats
-            image1={char1.image}
-            name1={char1.name}
-            realName1={char1.realName}
-            combat1={parseInt(char1.combat)}
-            durability1={parseInt(char1.durability)}
-            intelligence1={parseInt(char1.intelligence)}
-            power1={parseInt(char1.power)}
-            speed1={parseInt(char1.speed)}
-            strength1={parseInt(char1.strength)}
-
-            image2={char2.image}
-            name2={char2.name}
-            realName2={char2.realName}
-            combat2={parseInt(char2.combat)}
-            durability2={parseInt(char2.durability)}
-            intelligence2={parseInt(char2.intelligence)}
-            power2={parseInt(char2.power)}
-            speed2={parseInt(char2.speed)}
-            strength2={parseInt(char2.strength)}
-         />
+         <HeroStats char1={char1} char2={char2}/>
       </div>
    )
 }
