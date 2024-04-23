@@ -29,12 +29,13 @@ type Props2 = {
 type CharContextProps = {
    char1: Props1
    char2: Props2
-   setChar: (item: Props1|Props2) => void
+   setCharacter1: (item: any) => void
+   setCharacter2: (item: any) => void
 }
 
 export const CharContext = createContext<CharContextProps>({} as CharContextProps);
 
-export const CharProvider = ({children}: {children: React.ReactNode}) => {
+export const CharProvider = ({ children }: { children: React.ReactNode }) => {
    const [char1, setChar1] = useState<Props1>({
       image: null,
       name: null,
@@ -58,8 +59,8 @@ export const CharProvider = ({children}: {children: React.ReactNode}) => {
       strength: null
    });
 
-   function setChar(char: any) {
-      char1.name === null ?
+   function setCharacter1(char: any) {
+      char !== null ?
          setChar1({
             image: char.image.url,
             name: char.name,
@@ -72,6 +73,21 @@ export const CharProvider = ({children}: {children: React.ReactNode}) => {
             strength: char.powerstats.strength
          })
          :
+         setChar1({
+            image: null,
+            name: null,
+            realName: null,
+            combat: null,
+            durability: null,
+            intelligence: null,
+            power: null,
+            speed: null,
+            strength: null
+         })
+   }
+
+   function setCharacter2(char: any) {
+      char !== null ?
          setChar2({
             image: char.image.url,
             name: char.name,
@@ -83,10 +99,22 @@ export const CharProvider = ({children}: {children: React.ReactNode}) => {
             speed: char.powerstats.speed,
             strength: char.powerstats.strength
          })
+         :
+         setChar2({
+            image: null,
+            name: null,
+            realName: null,
+            combat: null,
+            durability: null,
+            intelligence: null,
+            power: null,
+            speed: null,
+            strength: null
+         })
    }
 
    return (
-      <CharContext.Provider value={{char1, char2, setChar}}>
+      <CharContext.Provider value={{ char1, char2, setCharacter1, setCharacter2 }}>
          {children}
       </CharContext.Provider>
    )

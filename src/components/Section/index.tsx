@@ -11,7 +11,7 @@ import Search from "../Search";
 export default function Section() {
    const [characters, setCharacters] = useState<any>(null);
    const [search, setSearch] = useState('');
-   const {char1, char2, setChar} = useContext(CharContext);
+   const {char1, char2, setCharacter1, setCharacter2} = useContext(CharContext);
    
    useEffect(() => {
       getCharacter('batman')
@@ -53,7 +53,7 @@ export default function Section() {
                         image={item.image.url}
                         name={item.name}
                         realName={item['biography']['full-name']}
-                        onClick={() => setChar(item)}
+                        onClick={char1.name !== null ? () => setCharacter2(item) : () => setCharacter1(item)}
                      />
                   ))
                   :

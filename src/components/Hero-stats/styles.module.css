@@ -54,7 +54,6 @@
 }
 
 .button {
-  width: 80px;
   height: 30px;
   border: none;
   border-radius: 6px;
@@ -68,4 +67,20 @@
 }
 .button:active {
   background-color: rgb(0, 0, 85);
+}
+
+.buttonX {
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  background-color: red;
+  transition: all 0.3s;
+  font-size: 16px;
+  font-weight: bold;
+}
+.buttonX:hover {
+  background-color: rgb(172, 0, 0);
+}
+.buttonX:active {
+  background-color: rgb(85, 0, 0);
 }/*# sourceMappingURL=styles.module.css.map */
