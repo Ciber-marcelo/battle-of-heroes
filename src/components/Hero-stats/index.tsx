@@ -61,12 +61,12 @@ export default function HeroStats({char1, char2}: Props) {
                </div>
 
                <div className={styles.stats}>
-                  <p>{char2.combat === 'null' || char1.combat === null ? '?' : char2.combat}</p>
-                  <p>{char2.durability === 'null' || char1.combat === null ? '?' : char2.durability}</p>
-                  <p>{char2.intelligence === 'null' || char1.combat === null ? '?' : char2.intelligence}</p>
-                  <p>{char2.power === 'null' || char1.combat === null ? '?' : char2.power}</p>
-                  <p>{char2.speed === 'null' || char1.combat === null ? '?' : char2.speed}</p>
-                  <p>{char2.strength === 'null' || char1.combat === null ? '?' : char2.strength}</p>
+                  <p>{char2.combat === 'null' || char2.combat === null ? '?' : char2.combat}</p>
+                  <p>{char2.durability === 'null' || char2.combat === null ? '?' : char2.durability}</p>
+                  <p>{char2.intelligence === 'null' || char2.combat === null ? '?' : char2.intelligence}</p>
+                  <p>{char2.power === 'null' || char2.combat === null ? '?' : char2.power}</p>
+                  <p>{char2.speed === 'null' || char2.combat === null ? '?' : char2.speed}</p>
+                  <p>{char2.strength === 'null' || char2.combat === null ? '?' : char2.strength}</p>
                   {char2.name !== null && <button onClick={() => setCharacter2(null)} className={styles.buttonX}>X</button>}
                </div>
             </div>
