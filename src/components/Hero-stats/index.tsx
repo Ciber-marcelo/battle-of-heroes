@@ -70,7 +70,6 @@ export default function HeroStats({ char1, char2 }: Props) {
                   <p>POWER</p>
                   <p>SPEED</p>
                   <p>STRENGTH</p>
-                  {/* <button className={styles.button}>WINS</button> */}
                </div>
 
                <div className={styles.stats}>
