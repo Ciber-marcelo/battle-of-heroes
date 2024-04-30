@@ -1,0 +1,7 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: darkred;
+  color: white;
+}/*# sourceMappingURL=styles.module.css.map */
