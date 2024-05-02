@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<img alt="Logo" src="https://i.imgur.com/GJE2Kqm.png" width="100%">
 
-## Getting Started
+## Indice
 
-First, run the development server:
+- [Sobre](#sobre)
+- [Tecnologias utilizadas](#tecnologias-utilizadas)
+- [Funcionalidades](#Funcionalidades)
+- [Acessar projeto](#Acessar-projeto)
+
+---
+
+## Sobre
+
+**Battle of heroes** é uma aplicação web feita para listar e comparar estatísticas de super herois de quadrinhos e filmes.
+
+---
+
+## Tecnologias utilizadas
+
+O projeto foi feito utilizando as seguintes tecnologias:
+
+- Next JS
+- Typescript
+- Sass
+- Context API
+
+Instruções:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  # Compilar o projeto:
+  npm install
+
+  # Rodar o projeto:
+  npm run dev 
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Funcionalidades
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Listagem de super herois de quadrinhos e filmes utilizando a [SuperHero API](https://superheroapi.com/index.html)
 
-## Learn More
+- Visualizar e comparar as estatisticas dos super herois
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Acessar projeto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Segue o link para acessar o projeto: [Battle of heroes](https://blue-lock-marcelones.vercel.app/)
 
-## Deploy on Vercel
+<br/>
+<div align="center">
+  Desenvolvido por Marcelones
+</div>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
