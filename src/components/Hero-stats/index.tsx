@@ -37,7 +37,7 @@ export default function HeroStats({ char1, char2 }: Props) {
       <div className={styles.main}>
          <div className={styles.card}>
             {char1.name !== null && <Card image={char1.image} name={char1.name} realName={char1.realName} />}
-            {char1.name !== null && <button onClick={() => setCharacter1(null)} className={styles.buttonX}>X</button>}
+            {char1.name !== null && <button onClick={() => setCharacter1(null)} className={styles.buttonX}>x</button>}
          </div>
 
          <div className={styles.containerStats1}>
@@ -97,7 +97,7 @@ export default function HeroStats({ char1, char2 }: Props) {
 
          <div className={styles.card}>
             {char2.name !== null && <Card image={char2.image} name={char2.name} realName={char2.realName} />}
-            {char2.name !== null && <button onClick={() => setCharacter2(null)} className={styles.buttonX}>X</button>}
+            {char2.name !== null && <button onClick={() => setCharacter2(null)} className={styles.buttonX}>x</button>}
          </div>
       </div>
    )
