@@ -1,3 +1,5 @@
+@import '../../utils/colors/colors.scss';
+
 .card {
    display: flex;
    flex-direction: column;
@@ -29,11 +31,11 @@
 .t1 {
    font-size: 18px;
    font-weight: 900;
-   color: white;
+   color: $color_text1;
 }
 
 .t2 {
    font-size: 12px;
    font-weight: 400;
-   color: white;
+   color: $color_text1;
 }
