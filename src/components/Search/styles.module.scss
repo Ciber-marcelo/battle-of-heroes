@@ -1,3 +1,5 @@
+@import '../../utils/colors/colors.scss';
+
 .container {
    display: flex;
 }
@@ -9,7 +11,7 @@
    border: none;
    outline: none;
    border-radius: 6px 0  0 6px;
-   background-color: rgba(0, 0, 0, 0.2);
+   background-color: $color_bg2;
 }
 
 .button {
@@ -17,7 +19,8 @@
    border-left: 0;
    padding: 10px;
    border-radius: 0 6px 6px 0;
-   background-color: #00000075;
+   background-color: $color_bg3;
+   font-weight: bold;
 
    &:hover {
       background-color: #000000af;

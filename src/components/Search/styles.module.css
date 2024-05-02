@@ -17,7 +17,8 @@
   border-left: 0;
   padding: 10px;
   border-radius: 0 6px 6px 0;
-  background-color: rgba(0, 0, 0, 0.4588235294);
+  background-color: rgba(0, 0, 0, 0.4);
+  font-weight: bold;
 }
 .button:hover {
   background-color: rgba(0, 0, 0, 0.6862745098);
