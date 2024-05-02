@@ -1,8 +1,8 @@
 export function fLN(n1: any, n2:any) {
    if (parseInt(n1) > parseInt(n2)) {
-      return 'rgb(21, 167, 21)'
+      return 'rgb(140, 255, 140)'
    } else if (parseInt(n2) > parseInt(n1)) {
-      return 'rgb(255, 65, 65)'
+      return 'rgb(255, 140, 140)'
    }
    return 'rgba(0, 0, 0, 0.4)'
 }
