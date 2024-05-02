@@ -1,13 +1,20 @@
-// $color1: red;
-// $color2: blue;
+// :root {
+//    $color_bg1: darkred;
+//    $color_bg2: rgba(0, 0, 0, 0.2);
+//    $color_bg3: rgba(0, 0, 0, 0.4);
+//    $color_text1: white;
+//    $color_text2: black;
+//    $color_hover1: #000000af;
+// }
+
+@import '../../utils/colors/colors.scss';
 
 .main {
    display: flex;
    flex-direction: column;
    align-items: center;
-   padding: 2rem 1rem 2rem 1rem ;
+   padding: 2rem 1rem 2rem 1rem;
    gap: 1rem;
-   background-color: rgb(255, 255, 255);
 }
 
 .containerChars {
@@ -17,7 +24,7 @@
    height: 268px;
    padding: 0.5rem;
    border-radius: 6px;
-   background-color: rgba(0, 0, 0, 0.2);
+   background-color: $color_bg2;
    overflow-x: auto;
 
    &::-webkit-scrollbar {
@@ -50,6 +57,7 @@
    align-items: center;
    gap: 0.5rem;
    border-radius: 10px;
+   color: $color_text2;
 }
 
 .notFound {
