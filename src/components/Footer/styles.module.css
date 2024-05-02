@@ -5,6 +5,8 @@
   padding: 1rem;
   background-color: darkred;
   gap: 0.5rem;
+  font-weight: bold;
+  color: white;
 }
 
 .image {
