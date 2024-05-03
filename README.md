@@ -46,7 +46,7 @@ Instruções:
 
 ## Acessar projeto
 
-Segue o link para acessar o projeto: [Battle of heroes](https://blue-lock-marcelones.vercel.app/)
+Segue o link para acessar o projeto: [Battle of heroes](https://battle-of-heroes-marcelones.vercel.app/)
 
 <br/>
 <div align="center">
