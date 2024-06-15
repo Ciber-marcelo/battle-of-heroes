@@ -11,8 +11,8 @@ import Search from "../Search";
 export default function Section() {
    const [characters, setCharacters] = useState<any>(null);
    const [search, setSearch] = useState('');
-   const {char1, char2, setCharacter1, setCharacter2} = useContext(CharContext);
-   
+   const { char1, char2, setCharacter1, setCharacter2 } = useContext(CharContext);
+
    useEffect(() => {
       getCharacter('batman')
    }, [])
@@ -20,7 +20,7 @@ export default function Section() {
    async function getCharacter(char: string) {
       setCharacters([])
       const response = await axios.get(`https://www.superheroapi.com/api.php/2450577805128827/search/${char}`);
-      if (response.data.results !== undefined) {
+      if (response.data.results !== undefined) { //faz a comparação do status 200 é melhor n ?
          setCharacters(response.data.results)
          console.log('sucesso', response.data.results)
       } else {
@@ -44,27 +44,25 @@ export default function Section() {
             onKeyDown={keyPress}
          />
 
-         <div className={styles.containerChars}>
-            <div className={styles.containerChars2}>
-               {characters !== null ?
-                  characters.map((item: any, i: any) => (
-                     <Card
-                        key={i}
-                        image={item.image.url}
-                        name={item.name}
-                        realName={item['biography']['full-name']}
-                        onClick={char1.name !== null ? () => setCharacter2(item) : () => setCharacter1(item)}
-                     />
-                  ))
-                  :
-                  <div className={styles.notFound}>
-                     {'NOT FOUND'}
-                  </div>
-               }
-            </div>
+         <div className={styles.containerChars1}>
+            {characters !== null ?
+               characters.map((item: any, i: any) => (
+                  <Card
+                     key={i}
+                     image={item.image.url}
+                     name={item.name}
+                     realName={item['biography']['full-name']}
+                     onClick={char1.name !== null ? () => setCharacter2(item) : () => setCharacter1(item)}
+                  />
+               ))
+               :
+               <div className={styles.notFound}>
+                  {'NOT FOUND'}
+               </div>
+            }
          </div>
 
-         <HeroStats char1={char1} char2={char2}/>
+         <HeroStats />
       </div>
    )
 }

@@ -4,34 +4,8 @@ import { useContext } from "react";
 import { CharContext } from "@/contexts/context";
 import { fLN } from "@/utils/formatLargestNumber";
 
-type Props = {
-   char1: {
-      image?: any
-      name?: any
-      realName?: any
-      combat?: any
-      durability?: any
-      intelligence?: any
-      power?: any
-      speed?: any
-      strength?: any
-   }
-
-   char2: {
-      image?: any
-      name?: any
-      realName?: any
-      combat?: any
-      durability?: any
-      intelligence?: any
-      power?: any
-      speed?: any
-      strength?: any
-   }
-}
-
-export default function HeroStats({ char1, char2 }: Props) {
-   const { setCharacter1, setCharacter2 } = useContext(CharContext);
+export default function HeroStats() {
+   const {char1, char2, setCharacter1, setCharacter2 } = useContext(CharContext);
 
    return (
       <div className={styles.main}>
