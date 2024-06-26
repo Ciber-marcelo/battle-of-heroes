@@ -15,3 +15,20 @@
    padding: 1rem;
    color: $color_text1;
 }
+
+.hidden1 {
+   display: flex;
+   
+   @media (max-width: 500px) {
+      display: none;
+   }
+}
+
+
+.hidden2 {
+   display: none;
+   
+   @media (max-width: 500px) {
+      display: flex;
+   }
+}

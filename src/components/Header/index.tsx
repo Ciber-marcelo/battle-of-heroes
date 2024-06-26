@@ -12,7 +12,7 @@ export default function Header() {
                alt="icon"
             />
             <h1 className={styles.hidden1}>BATTLE OF HEROES</h1>
-            {/* <h1 className={styles.hidden2}>HEROES</h1> */}
+            <h1 className={styles.hidden2}>HEROES</h1>
          </div>
       </div>
    )

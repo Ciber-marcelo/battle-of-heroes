@@ -12,4 +12,22 @@
   max-width: 1200px;
   padding: 1rem;
   color: white;
+}
+
+.hidden1 {
+  display: flex;
+}
+@media (max-width: 500px) {
+  .hidden1 {
+    display: none;
+  }
+}
+
+.hidden2 {
+  display: none;
+}
+@media (max-width: 500px) {
+  .hidden2 {
+    display: flex;
+  }
 }/*# sourceMappingURL=styles.module.css.map */
