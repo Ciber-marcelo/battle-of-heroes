@@ -5,7 +5,6 @@
 - [Sobre](#sobre)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
 - [Funcionalidades](#Funcionalidades)
-- [Acessar projeto](#Acessar-projeto)
 
 ---
 
@@ -42,11 +41,6 @@ Instruções:
 
 - Visualizar e comparar as estatisticas dos super herois
 
----
-
-## Acessar projeto
-
-Segue o link para acessar o projeto: [Battle of heroes](https://battle-of-heroes-marcelones.vercel.app/)
 
 <br/>
 <div align="center">
